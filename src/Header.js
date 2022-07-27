@@ -5,6 +5,18 @@ import Navbar from "react-bootstrap/Navbar";
 import "./Css/header.css";
 
 function Header() {
+  const navBar = {
+    color: "#fff",
+    backgroundColor: "var(--Secondary-clr)",
+  };
+
+  const navBarCollapse = {
+    color: "#fff",
+    backgroundColor: "var(--Primary-clr)",
+    width: "100%",
+    textAlign: "center",
+    padding: "1rem 0",
+  };
   return (
     <>
       <header className="header">
@@ -13,10 +25,11 @@ function Header() {
             <Navbar.Brand href="#home" id="logo">
               e-Demy
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle aria-controls="basic-navbar-nav" style={navBar} />
             <Navbar.Collapse
               id="basic-navbar-nav"
               className="justify-content-end"
+              style={navBarCollapse}
             >
               <Nav className="me-auto nav-links">
                 <Nav.Link href="/">Home</Nav.Link>

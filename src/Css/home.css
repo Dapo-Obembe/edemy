@@ -191,6 +191,27 @@
   color: var(--Primary-clr);
 }
 
+@media screen and (max-width: 992px) {
+  .about-texts {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  .about-texts h2 {
+    text-align: center;
+    width: 100%;
+    line-height: 1.1;
+  }
+
+  .about-texts p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-btn {
+    margin: 0 auto;
+  }
+}
+
 /* COURSES SECTION */
 .courses-items {
   display: flex;
@@ -199,6 +220,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 992px) {
+  .courses-section_items {
+    display: grid;
+    place-self: center;
+  }
+}
 .courses-items h2 {
   font-size: clamp(2rem, 0.5rem + 3vw, 3rem);
   font-weight: 700;
@@ -211,7 +238,7 @@
   min-height: 400px;
   width: 250px;
   border: 2px solid var(--Primary-clr);
-  margin: 0 2rem;
+  margin: 1rem 2rem;
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -277,4 +304,19 @@
   min-height: 300px;
   max-height: 600px;
   float: right;
+}
+
+@media screen and (max-width: 992px) {
+  .download-texts h2 {
+    text-align: center;
+    width: 100%;
+  }
+  .download-texts p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .download-btn {
+    margin: 1rem auto;
+  }
 }

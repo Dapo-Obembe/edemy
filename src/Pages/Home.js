@@ -39,7 +39,7 @@ function Home() {
       </section>
       <section className="about">
         <Container className="about-contents">
-          <Row>
+          <Row className="justify-content-center">
             <Col lg={6} md={12} className="about-first-col">
               <img src="/Img/Artist.png" alt="" className="img-fluid" />
             </Col>
@@ -67,7 +67,12 @@ function Home() {
               <h2>Our Offered Courses</h2>
             </Col>
           </Row>
-          <Row style={{ marginBottom: "2rem" }}>
+          <Row
+            className="courses-section_items"
+            style={{
+              marginBottom: "2rem",
+            }}
+          >
             <Col lg={4} sm={12}>
               <div className="course-box">
                 <img src="/Img/Chemistry.png" alt="" />
