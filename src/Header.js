@@ -19,10 +19,10 @@ function Header() {
               className="justify-content-end"
             >
               <Nav className="me-auto nav-links">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Teachers</Nav.Link>
-                <Nav.Link href="#link">Contact</Nav.Link>
-                <Nav.Link href="#link">Login</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/teachers">Teachers</Nav.Link>
+                <Nav.Link href="/contact">Contact</Nav.Link>
+                <Nav.Link href="/login">Login</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
