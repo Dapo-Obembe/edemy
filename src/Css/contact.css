@@ -1,0 +1,11 @@
+.form-col1 label {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-col1 input {
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--Primary-clr);
+  border-radius: 0.5rem;
+}
