@@ -21,8 +21,12 @@ function Home() {
                 </p>
               </div>
               <div className="hero-btns">
-                <button type="button">Log In</button>
-                <button type="button">Sign Up</button>
+                <button type="button" className="btn">
+                  Log In
+                </button>
+                <button type="button" className="btn">
+                  Sign Up
+                </button>
               </div>
             </Col>
             <Col lg={6} md={12}>

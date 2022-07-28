@@ -13,8 +13,6 @@ function Header() {
   const navBarCollapse = {
     color: "#fff",
     backgroundColor: "var(--Primary-clr)",
-    width: "100%",
-    textAlign: "center",
     padding: "1rem 0",
   };
   return (
