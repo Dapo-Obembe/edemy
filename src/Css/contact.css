@@ -9,3 +9,11 @@
   border: 2px solid var(--Primary-clr);
   border-radius: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column !important;
+    margin: 0 auto;
+  }
+}

@@ -59,7 +59,9 @@ function Contact() {
         style={{
           backgroundColor: "var(--Background-white)",
           paddingTop: "6rem",
+          paddingBottom: "3rem",
           minHeight: "600px",
+          width: "100%",
         }}
       >
         <Container className="contact-items">
@@ -68,6 +70,7 @@ function Contact() {
               style={{
                 minHeight: "100px",
                 backgroundColor: "var(--Background-white)",
+                width: "60%",
               }}
             >
               <div className="text-center">
@@ -106,7 +109,7 @@ function Contact() {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                width: "60%",
+                width: "100%",
                 margin: "0 auto",
               }}
             >
@@ -118,6 +121,7 @@ function Contact() {
                   gap: "2rem",
                   margin: "2rem auto",
                 }}
+                className="form-container"
               >
                 <div
                   className="form-col1"
