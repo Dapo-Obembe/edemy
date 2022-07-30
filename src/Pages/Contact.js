@@ -31,10 +31,10 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(inputs);
+    console.log(inputs);
   };
 
-  const [textarea, setTextarea] = useState("Type your message here");
+  const [textarea, setTextarea] = useState("");
 
   const handleText = (e) => {
     setTextarea(e.target.value);
@@ -159,7 +159,8 @@ function Contact() {
                   <textarea
                     rows="6"
                     cols="40"
-                    value={textarea}
+                    placeholder="Type your message here"
+                    value={textarea || ""}
                     onChange={handleText}
                     style={{
                       width: "350px",
@@ -168,13 +169,11 @@ function Contact() {
                       borderRadius: "0.5rem",
                     }}
                   />
+                  <div className="text-left submit">
+                    <input type="submit" style={sumBtn} />
+                  </div>
                 </div>
               </form>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} className="text-center">
-              <input type="submit" style={sumBtn} />
             </Col>
           </Row>
         </Container>
