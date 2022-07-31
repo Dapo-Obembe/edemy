@@ -1,0 +1,68 @@
+@media screen and (max-width: 768px) {
+  .sign-in {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url("/public/Img/Account.png") no-repeat center center/cover;
+  }
+
+  .sign-in-container {
+    padding-top: 2rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .sign-in-container h1 {
+    margin-bottom: 1rem !important;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #fff;
+  }
+  .sign-in-col1 {
+    background-color: var(--Primary-clr);
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .sign-in-Btn {
+    background-color: var(--Secondary-clr) !important;
+    color: var(--Primary-clr) !important;
+    font-weight: 700;
+  }
+
+  .sign-in-form,
+  .sign-in-Btn {
+    margin: 0 auto;
+  }
+
+  .sign-in-col2 {
+    display: none;
+  }
+  .reg-prompt {
+    color: #fff !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin-top: 2rem !important;
+  }
+
+  .reg-prompt a {
+    color: var(--Secondary-clr);
+    text-decoration: none;
+  }
+}
+
+.reg-prompt {
+  color: var(--Primary-clr);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.reg-prompt a {
+  color: var(--Secondary-clr);
+  text-decoration: none;
+  font-weight: 800;
+}

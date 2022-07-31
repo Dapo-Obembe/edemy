@@ -33,7 +33,7 @@ function Header() {
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/teachers">Teachers</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
-                <Nav.Link href="/login">Login</Nav.Link>
+                <Nav.Link href="/sign-in">Sign In</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

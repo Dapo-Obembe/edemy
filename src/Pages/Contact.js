@@ -163,7 +163,7 @@ function Contact() {
                     value={textarea || ""}
                     onChange={handleText}
                     style={{
-                      width: "350px",
+                      width: "100%",
                       height: "150px",
                       border: "2px solid var(--Primary-clr)",
                       borderRadius: "0.5rem",
