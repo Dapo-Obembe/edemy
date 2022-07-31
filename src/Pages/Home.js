@@ -22,7 +22,12 @@ function Home() {
               </div>
               <div className="hero-btns">
                 <button type="button" className="btn">
-                  Log In
+                  <a
+                    href="/sign-in"
+                    style={{ color: "#fff", textDecoration: "none" }}
+                  >
+                    Log In
+                  </a>
                 </button>
                 <button type="button" className="btn">
                   Sign Up
