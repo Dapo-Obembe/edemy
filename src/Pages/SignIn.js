@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../Css/signin.css";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
   const [data, setData] = useState({
@@ -17,9 +18,12 @@ function SignIn() {
     }));
   };
 
+  //Redirecting after login
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`You are welcome, ${data.username}`);
+    alert(`Welcome back, ${data.username}`);
+    navigate("/contact", { replace: true });
   };
 
   //SIGN IN PAGE COLUMN 1
@@ -93,7 +97,7 @@ function SignIn() {
             <Col lg={6} sm={12} style={logCol1} className="sign-in-col1">
               <h1 style={logCol1.H1}>Sign In to Your Account</h1>
               <div className="sign-in-form">
-                <form method="GET" onSubmit={handleSubmit} action="/contact">
+                <form onSubmit={handleSubmit}>
                   <div className="sign-in-form" style={formSignIn}>
                     <label>
                       <input
