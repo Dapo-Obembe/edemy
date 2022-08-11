@@ -20,24 +20,25 @@ function Contact() {
     height: "50px",
   };
 
-  //HOOKS
-  const [inputs, setInputs] = useState({});
+  //FORM HOOKS
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    text: "",
+  });
 
   const handleInputs = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
+    setInputs((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputs);
-  };
-
-  const [textarea, setTextarea] = useState("");
-
-  const handleText = (e) => {
-    setTextarea(e.target.value);
+    alert(
+      `Your name is: ${inputs.name}, email is: ${inputs.email} and message is: ${inputs.text}. We will get in touch with you soon!`
+    );
   };
 
   //SUBMIT BUTTON
@@ -138,7 +139,8 @@ function Contact() {
                       type="text"
                       name="name"
                       placeholder="Enter your name.."
-                      value={inputs.name || ""}
+                      required
+                      value={inputs.name}
                       onChange={handleInputs}
                     />
                   </label>
@@ -147,7 +149,8 @@ function Contact() {
                       type="email"
                       name="email"
                       placeholder="Enter your email.."
-                      value={inputs.email || ""}
+                      required
+                      value={inputs.email}
                       onChange={handleInputs}
                     />
                   </label>
@@ -159,9 +162,11 @@ function Contact() {
                   <textarea
                     rows="6"
                     cols="40"
+                    name="text"
                     placeholder="Type your message here"
-                    value={textarea || ""}
-                    onChange={handleText}
+                    required
+                    value={inputs.text}
+                    onChange={handleInputs}
                     style={{
                       width: "100%",
                       height: "150px",

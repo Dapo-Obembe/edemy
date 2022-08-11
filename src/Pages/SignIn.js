@@ -5,17 +5,21 @@ import Col from "react-bootstrap/Col";
 import "../Css/signin.css";
 
 function SignIn() {
-  const [inputs, setInputs] = useState({});
+  const [data, setData] = useState({
+    username: "",
+    password: "",
+  });
 
-  const handleInputs = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
+  const handleData = (e) => {
+    setData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputs);
+    alert(`You are welcome, ${data.username}`);
   };
 
   //SIGN IN PAGE COLUMN 1
@@ -89,15 +93,16 @@ function SignIn() {
             <Col lg={6} sm={12} style={logCol1} className="sign-in-col1">
               <h1 style={logCol1.H1}>Sign In to Your Account</h1>
               <div className="sign-in-form">
-                <form onSubmit={handleSubmit}>
+                <form method="GET" onSubmit={handleSubmit} action="/contact">
                   <div className="sign-in-form" style={formSignIn}>
                     <label>
                       <input
                         type="text"
                         name="username"
                         placeholder="Enter your username.."
-                        value={inputs.username || ""}
-                        onChange={handleInputs}
+                        value={data.username || ""}
+                        required
+                        onChange={handleData}
                         style={formSignIn.input}
                       />
                     </label>
@@ -106,8 +111,8 @@ function SignIn() {
                         type="password"
                         name="password"
                         placeholder="Enter your password"
-                        value={inputs.password || ""}
-                        onChange={handleInputs}
+                        value={data.password}
+                        onChange={handleData}
                         style={formSignIn.input}
                       />
                     </label>
@@ -121,7 +126,7 @@ function SignIn() {
                 </form>
                 <div className="reg-prompt">
                   <p>
-                    Don't have an account? <a href="#">Sign Up!</a>
+                    Don't have an account? <a href="/sign-up">Sign Up!</a>
                   </p>
                 </div>
               </div>
